@@ -28,5 +28,10 @@ $arComponentParameters = array(
             'DEFAULT' => '',
             'PARENT' => 'BASE',
         ),
+        'JQERY' => Array(
+            'NAME' => 'Подключить jQuery',
+            'TYPE' => 'CHECKBOX',
+            'PARENT' => 'BASE',
+        ),
     ),
 );
