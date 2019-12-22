@@ -10,11 +10,11 @@ Loader::includeModule('highloadblock');
 
 $post = Application::getInstance()->getContext()->getRequest();
 
-$name = $post->getPost("NAME");
-$phone = $post->getPost("PHONE");
-$url = $post->getPost("URL");
-$id = (int)$post->getPost("ID");
-$send = (int)$post->getPost("ID_SEND");
+$name = htmlspecialchars($post->getPost("NAME"));
+$phone = htmlspecialchars($post->getPost("PHONE"));
+$url = htmlspecialchars($post->getPost("URL"));
+$id = htmlspecialchars((int)$post->getPost("ID"));
+$send = htmlspecialchars((int)$post->getPost("ID_SEND"));
 
 if ($id):
     if ($phone):
