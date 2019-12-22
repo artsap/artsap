@@ -22,4 +22,4 @@
         <input type="submit" value="Отправить">
     </form>
 </div>
-<a class="openForm" href="Нажми на меня">Нажми на меня</a>
+<a class="openForm" rel="nofollow" href="#">Нажми на меня</a>
