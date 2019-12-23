@@ -1,5 +1,6 @@
 <? require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+
 use Bitrix\Main\Loader;
 use Bitrix\Main\Mail\Event;
 use Bitrix\Highloadblock as HL;
@@ -15,6 +16,7 @@ $phone = htmlspecialchars($post->getPost("PHONE"));
 $url = htmlspecialchars($post->getPost("URL"));
 $id = htmlspecialchars((int)$post->getPost("ID"));
 $send = htmlspecialchars((int)$post->getPost("ID_SEND"));
+$ok_text = htmlspecialchars($post->getPost("OK_TEXT"));
 
 if ($id):
     if ($phone):
@@ -42,7 +44,7 @@ if ($id):
             )
         ));
 
-        echo '<span style="color:green;">Сообщение получено</span>';
+        echo '<span style="color:green;">' . $ok_text . '</span>';
     else:
         echo '<span style="color:red;">Не указан телефон</span>';
     endif;

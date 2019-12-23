@@ -14,6 +14,7 @@
 <div id="formBox" data-url="<?= $templateFolder; ?>">
     <div class="close"></div>
     <form action="#" id="formGo">
+        <input name="OK_TEXT" type="hidden" value="<?=$arParams['OK_TEXT']; ?>" required>
         <input name="URL" id="url" type="hidden" required>
         <input name="ID" type="hidden" value="<?= $arParams['HLB_ID']; ?>" required>
         <input name="ID_SEND" type="hidden" value="<?= $arParams['EVENT_MESSAGE_ID']; ?>" required>
